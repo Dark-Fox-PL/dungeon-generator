@@ -1,8 +1,11 @@
 package pl.darkfox.dungeongenerator
 
-import core.Tiles
+import core.configuration.DungeonConfig
 
 @main def dungeonGenerator(): Unit = {
-  println("Surface tiles")
-  println(Tiles.surfaceTiles)
+  val config: DungeonConfig = new DungeonConfig
+
+  println(s"Rooms: ${config.map.generateRoomsAmount}")
+  println(s"Width: ${config.map.generateMapWidth}")
+  println(s"Height: ${config.map.generateMapHeight}")
 }
