@@ -5,7 +5,6 @@ import core.configuration.DungeonConfig
 @main def dungeonGenerator(): Unit = {
   val config: DungeonConfig = new DungeonConfig
 
-  println(s"Rooms: ${config.map.generateRoomsAmount}")
-  println(s"Width: ${config.map.generateMapWidth}")
-  println(s"Height: ${config.map.generateMapHeight}")
+  println(s"Chests: ${config.chests.generateAmount}; ${config.chests.amount.mkString("Array(", ", ", ")")}")
+  println(s"Obstacles: ${config.obstacles.generateAmount}; ${config.obstacles.amount.mkString("Array(", ", ", ")")}")
 }
