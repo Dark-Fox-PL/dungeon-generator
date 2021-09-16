@@ -5,6 +5,7 @@ enum Tiles(val tile: String):
   case Empty      extends Tiles(" ")
   case Floor      extends Tiles(".")
   case Wall       extends Tiles("#")
+  case Door       extends Tiles(":")
   case Chest      extends Tiles("C")
   case Obstacle   extends Tiles("O")
   case Store      extends Tiles("$")
@@ -15,6 +16,7 @@ enum Tiles(val tile: String):
 object Tiles:
   val surfaceTiles: List[String] = List(
     Tiles.Floor.tile,
+    Tiles.Door.tile,
     Tiles.Boss.tile,
     Tiles.MiniBoss.tile,
     Tiles.Chest.tile,
