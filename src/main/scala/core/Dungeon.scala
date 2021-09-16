@@ -9,7 +9,7 @@ case class Dungeon(dungeonConfig: DungeonConfig):
 
   def generateMaps: Dungeon =
     for (currentLevel <- 1 to this.dungeonConfig.levels)
-      val map: Map = new Map(this.dungeonConfig.map, currentLevel)
+      val map: Location = new Location(this.dungeonConfig.map, currentLevel)
       map.create
 
     this
