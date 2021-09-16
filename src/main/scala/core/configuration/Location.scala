@@ -1,10 +1,10 @@
 package pl.darkfox.dungeongenerator
 package core.configuration
 
-class Map:
+class Location:
   var rooms: Array[Int] = Array( 40, 60 )
-  var width: Array[Int] = Array( 128, 256 )
-  var height: Array[Int] = Array( 128, 256 )
+  var width: Array[Int] = Array( 3, 7 )
+  var height: Array[Int] = Array( 3, 7 )
   val obstacles: Obstacles = new Obstacles
   val chests: Chests = new Chests
 
